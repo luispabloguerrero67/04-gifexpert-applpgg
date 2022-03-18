@@ -1,11 +1,25 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
-const GifReadItem = ({id, title, url}) => {
+//import PropTypes from 'prop-types'
+//import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+const GifReadItem = ({ id, title, url }) => {
     return (
         <div className='card animate__animated animate__fadeIn'>
-            <img src={url} alt={title}/>
-            <p>{title}</p>
+
+            <ImageListItem key={id}>
+                <img
+                    src={`${url}?w=248&fit=crop&auto=format`}
+                    srcSet={`${url}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={title}
+                    loading="lazy"
+                />
+                <ImageListItemBar
+                    title={title}
+                    
+                    position="below"
+                />
+            </ImageListItem>
         </div>
     )
 }

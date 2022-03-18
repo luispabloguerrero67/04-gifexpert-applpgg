@@ -1,14 +1,10 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    color: #dce0e6;
 }
 body {
     padding: 60px;
-}
-
-input{
-    font-size:  1.2em;;
-    width: 100%;
-    color: gray;
+    background-color: rgb(0, 30, 60);
 }
 
 .card-grid{
@@ -17,6 +13,7 @@ input{
  flex-wrap: wrap;
 
 }
+
 .card{
     align-content: center;
     border: 1px solid gray;

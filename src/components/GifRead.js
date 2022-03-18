@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Component } from 'react'
-import PropTypes from 'prop-types'
+//import React, { useState, useEffect, Component } from 'react'
+//import PropTypes from 'prop-types'
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import GifReadItem from './GifReadItem';
 function GifRead({ category }) {
