@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import autocompleteGifs from '../helpers/autocompleteGifs'
 function AddCategory({ setcategories }) {
 
     const [inputvalue, setInputvalue] = useState('')
@@ -12,13 +12,12 @@ function AddCategory({ setcategories }) {
         e.preventDefault();
 
         if (inputvalue.trim().length > 2) {
-            setcategories((cat) => [...cat, inputvalue]);
+            setcategories((cat) => [inputvalue, ...cat]);
         }
     }
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <h2>AddCategory</h2>
                 <input
                     type='text'
                     value={inputvalue}

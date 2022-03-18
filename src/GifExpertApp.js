@@ -1,11 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import AddCategory from './components/AddCategory';
+import GifRead from './components/GifRead';
 
 function GifExpertApp(props) {
 
-  const [categories1, setcategories] = useState(['category1', 'category2', 'category3'])
-  
+  const [categories1, setcategories] = useState(['tamales'])
+
   /*
   const addCategory = (e) => { 
     
@@ -13,20 +14,22 @@ function GifExpertApp(props) {
     setcategories( cats => [...cats, 'cat4']);
    }
   */
- 
+
   return (
     <>
       <h2>GifExpertApp</h2>
-      <AddCategory setcategories={setcategories}/>
+      <AddCategory setcategories={setcategories} />
       <hr />
 
 
       <ol>
-      {
-        categories1.map((ct) => {
-          return <li key={ct}>{ct}</li>
-        })
-      }
+        {
+          categories1.map((ct) =>
+            (<GifRead 
+              key={ct}
+              category={ct}/>)
+          )
+        }
       </ol>
     </>
 
