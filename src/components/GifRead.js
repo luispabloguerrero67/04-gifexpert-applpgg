@@ -2,9 +2,9 @@
 //import PropTypes from 'prop-types'
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import GifReadItem from './GifReadItem';
-function GifRead({ category }) {
+function GifRead({ category, itemMax }) {
 
-  const { data:images, loading } = useFetchGifs(category);
+  const { data:images, loading } = useFetchGifs(category, itemMax);
 
   return (
     <>
@@ -15,7 +15,8 @@ function GifRead({ category }) {
           images.map((img) =>
           (<GifReadItem
             key={img.id}
-            {...img} />)
+            {...img}
+            />)
           )
         }
 
