@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
-function AddCategory( props ) {
+function AddCategory({ onchangeAddcategories, onchangeItem }) {
 
     const [inputvalue, setInputvalue] = useState('')
 
@@ -14,18 +14,17 @@ function AddCategory( props ) {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(props)
         if (inputvalue.trim().length > 2) {
 
-            props.onchangeAddcategories(inputvalue);
+            onchangeAddcategories(inputvalue);
         }
     }
     const handleReset = () => {
-        props.onchangeAddcategories('');
+        onchangeAddcategories('');
     }
 
     const handleLoadMore = () => {
-        props.onchangeItem(10);
+        onchangeItem(10);
     }
     return (
         <>
@@ -38,14 +37,19 @@ function AddCategory( props ) {
             >
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={12} md={4}>
+                        <input placeholder='Search a gif'
+                            onChange={(e) => handleInputChange(e)} type='text' 
+                            className='input'/>
+                        <p>{inputvalue}</p>
+                        {/* 
                         <TextField
                             placeholder='Search a gif'
-                            inputProps={{ style: { color: 'white' } }}
+                            InputProps={{ style: { color: 'white' } }}
                             className='input'
                             type='text'
                             value={inputvalue}
                             onChange={(e) => handleInputChange(e)}
-                        />
+                        /> */}
                     </Grid>
                     <Grid item xs={2} md={2}>
                         <Button variant="contained" onClick={handleSubmit}>Search</Button>

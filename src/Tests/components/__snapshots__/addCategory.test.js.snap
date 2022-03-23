@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en <addcategory> debe mostrarse correctamente 1`] = `
+<Fragment>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "& > :not(style)": Object {
+          "m": 1,
+        },
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <ForwardRef(Grid)
+      columnSpacing={
+        Object {
+          "md": 3,
+          "sm": 2,
+          "xs": 1,
+        }
+      }
+      container={true}
+      rowSpacing={1}
+    >
+      <ForwardRef(Grid)
+        item={true}
+        md={4}
+        xs={12}
+      >
+        <input
+          className="input"
+          onChange={[Function]}
+          placeholder="Search a gif"
+          type="text"
+        />
+        <p />
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        md={2}
+        xs={2}
+      >
+        <ForwardRef(Button)
+          onClick={[Function]}
+          variant="contained"
+        >
+          Search
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        md={2}
+        xs={2}
+      >
+        <ForwardRef(Button)
+          onClick={[Function]}
+          variant="contained"
+        >
+          Clear
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
+        item={true}
+        md={2}
+        xs={2}
+      >
+        <ForwardRef(Button)
+          onClick={[Function]}
+          variant="contained"
+        >
+          load more
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Box)>
+</Fragment>
+`;

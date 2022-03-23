@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifGridItem/> debe de mostrar el componente correctamente 1`] = `
+<div
+  className="card animate__animated animate__fadeIn"
+>
+  <ForwardRef(ImageListItem)
+    key="1"
+  >
+    <img
+      alt="title"
+      loading="lazy"
+      src="https://localhost/logo.jpg?w=248&fit=crop&auto=format"
+      srcSet="https://localhost/logo.jpg?w=248&fit=crop&auto=format&dpr=2 2x"
+    />
+    <ForwardRef(ImageListItemBar)
+      position="below"
+      title="title"
+    />
+    <p>
+      title
+    </p>
+  </ForwardRef(ImageListItem)>
+</div>
+`;

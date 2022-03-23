@@ -1,3 +1,4 @@
+
 export const getGifs = async (category, itemMax) => {
 
     const url = `https://api.giphy.com/v1/gifs/search?q=${ encodeURI(category) }&limit=${itemMax}&api_key=eijkqvC3mWFWTHfRdvENk5qA7jk7fawu`;
